@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Survey Form</title>
+        <link rel="stylesheet" href="SurveyForm.css">
+    </head>
+    <body>
+        <h1 id="title">title</h1>
+        <p id="description">Survey form</p>
+        <form id="survey-form" action="">
+            <fieldset>
+                <label for="survey-form" id="name-label">Enter your name: &nbsp<input id="name" type="text" placeholder="John Johnson" required></label>
+                <label for="survey-form" id="email-label">Enter your email: <input id="email" type="email" placeholder="John@gmail.com" required></label>
+                <label for="survey-form" id="number-label">Enter your age: &nbsp&nbsp<input id="number" type="number" min="0" max="100" placeholder="21" required></label>
+                <!--input type="submit" value=""-->
+                <label for="survey-form" id="dropdown-label">Phone Type: &nbsp&nbsp&nbsp&nbsp&nbsp;
+                    <select name="" id="dropdown">
+                        <option value="">(select one)</option>
+                        <option value="1">iPhone</option>
+                        <option value="2">android</option>
+                    </select>
+                </label>
+                <p>Account  Type: </p>
+                <label for="survey-form" id="radio-label"><input type="radio" name="account-type" class="inline" value="chequing"/> chequing</label>
+                <label for="survey-form" id="radio-label"><input type="radio" name="account-type" class="inline" value="savings"/> savings</label>
+                <label for="survey-form" id="radio-label"><input type="radio" name="account-type" class="inline" value="investment"/> investment</label>
+            </fieldset>
+            <fieldset>
+                <p>Interests: </p>
+                <label for="survey-form" id="checkbox-label"><input type="checkbox" name="interests" class="inline" value="gaming" />gaming</label>
+                <label for="survey-form" id="checkbox-label"><input type="checkbox" name="interests" class="inline" value="film" />film</label>
+                <label for="survey-form" id="checkbox-label"><input type="checkbox" name="interests" class="inline" value="business" />business</label>
+                <label for="survey-form" id="checkbox-label"><input type="checkbox" name="interests" class="inline" value="finance" />finance</label>
+                <label for="survey-form" id="checkbox-label"><input type="checkbox" name="interests" class="inline" value="sports" />sports</label>
+                <label for="survey-form" id="checkbox-label"><input type="checkbox" name="interests" class="inline" value="activism" />activism</label>
+                <label for="survey-form" id="checkbox-label"><input type="checkbox" name="interests" class="inline" value="other" />other</label>
+            </fieldset>
+            <fieldset>
+                <label for="survey-form" id="textarea-label"><textarea name="comments" rows="3" cols="30" placeholder="additional comments" style="resize: none;"></textarea></label>
+            </fieldset>
+            <input id="submit" type="submit" value="Submit" />
+        </form>
+    </body>
+</html>
