@@ -21,14 +21,11 @@ h1 {
 }
 
 @media (max-width: 460px) {
+  /* slightly reduces font size for smaller screens */
   h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
+    font-size: 3.2rem;
+    line-height: normal;
   }
-}
-
-h2 {
-  font-size: 3.25rem;
 }
 
 a {
@@ -36,12 +33,14 @@ a {
 }
 
 a:visited {
-  color: #74638f;
+  /* color: #74638f; */
+  color: purple;
 }
 
 #main {
-  margin: 30px 8px;
-  padding: 15px;
+  /* margin: 30px 8px; */
+  /* padding: 15px; */
+  padding: 1.5rem;
   border-radius: 5px;
   background: #eee;
 }
