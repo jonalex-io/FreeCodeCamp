@@ -45,11 +45,13 @@ a:visited {
   background: #eee;
 }
 
-@media (max-width: 460px) {
+/* adds a margin for smaller screen sizes */
+/* @media (max-width: 460px) {
   #main {
     margin: 0;
+    margin: 100px;
   }
-}
+} */
 
 img {
   max-width: 100%;
@@ -59,15 +61,18 @@ img {
 }
 
 #img-div {
-  background: white;
+  background: whitesmoke;
+  max-width: fit-content;
   padding: 10px;
   margin: 0;
+  display: inline-block;
 }
 
 #img-caption {
   margin: 15px 0 5px 0;
 }
 
+/* make img-caption smaller for smaller screens */
 @media (max-width: 460px) {
   #img-caption {
     font-size: 1.4rem;
@@ -76,23 +81,25 @@ img {
 
 #headline {
   margin: 50px 0;
-  text-align: center;
+  /* text-align: center; */
 }
 
 ul {
-  max-width: 550px;
-  margin: 0 auto 50px auto;
+  max-width: 500px;
+  margin: 0 auto 0 auto;
   text-align: left;
   line-height: 1.6;
+  /* A number that will be multiplied with the 
+  current font-size to set the line height */
 }
 
 li {
-  margin: 16px 0;
+  margin: 1.6rem 0;
 }
 
 blockquote {
   font-style: italic;
-  max-width: 545px;
-  margin: 0 auto 50px auto;
-  text-align: left;
+  max-width: 500px;
+  margin: 50px auto 50px auto;
+  text-align: center;
 }
