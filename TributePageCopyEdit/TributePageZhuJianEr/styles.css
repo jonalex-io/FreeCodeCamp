@@ -60,6 +60,10 @@ img {
   margin: 0 auto;
 }
 
+#image {
+  max-width: 100%;
+}
+
 #img-div {
   background: whitesmoke;
   max-width: fit-content;
