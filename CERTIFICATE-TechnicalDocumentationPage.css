@@ -45,17 +45,21 @@ header {
 
 #navbar li {
   color: #4d4e53;
-  border-top: 1px solid;
+  /* border-top: 1px solid; */
   list-style: none;
-  /* position: relative; */
-  position: static;
-  /* width: 100%; */
+  position: relative;
+  /* width: 95%; */
+}
+
+#navbar div {
+  color: #4d4e53;
+  border-top: 1px solid;
   width: 95%;
 }
 
 #navbar a {
   display: block;
-  padding: 10px 30px;
+  padding: 9px 25px;
   color: #4d4e53;
   text-decoration: none;
   cursor: pointer;
@@ -63,9 +67,11 @@ header {
 
 #main-doc {
   position: absolute;
-  margin-left: 310px;
+  /* margin-left: 300px; */
+  left: 300px;
+  right: 10px;
   padding: 20px;
-  margin-bottom: 110px;
+  /* margin-bottom: 50; */
 }
 
 section article {
@@ -99,6 +105,9 @@ code {
     height: 207px;
   }
   #navbar li {
+    width: 100%;
+  }
+  #navbar div {
     width: 100%;
   }
 
