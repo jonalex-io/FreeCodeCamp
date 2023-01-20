@@ -9,6 +9,14 @@ body {
   line-height: 1.5;
 }
 
+blockquote {
+  font-style: italic;
+  margin:10px;
+  max-width: 425px;
+  display: table;
+  margin:0 auto;
+}
+
 #navbar {
   /* navbar always stays on the left */
   position: fixed;
@@ -27,6 +35,7 @@ header {
   margin: 10px;
   text-align: center;
   font-size: 1.8em;
+  padding: 5px
   /* font-weight: thin; */
 }
 
@@ -130,7 +139,7 @@ code {
     position: relative;
     margin-left: 0px;
     margin-right: 0px;
-    margin-top: 248px;
+    margin-top: 258px;
   }
 }
 
