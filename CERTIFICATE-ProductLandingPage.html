@@ -2,17 +2,24 @@
 <html>
 
 <head>
-  <!-- <link rel="stylesheet" href="CERTIFICATE-ProductLandingPage.css" /> -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link rel="stylesheet" href="CERTIFICATE-ProductLandingPage.css" />
+  <link
+    href="/Users/jonalex/Library/Mobile Documents/com~apple~CloudDocs/PROGRAM/assets/fontawesome-free-6.3.0-web/css/fontawesome.css"
+    rel="stylesheet">
+  <link
+    href="/Users/jonalex/Library/Mobile Documents/com~apple~CloudDocs/PROGRAM/assets/fontawesome-free-6.3.0-web/css/brands.css"
+    rel="stylesheet">
+  <link
+    href="/Users/jonalex/Library/Mobile Documents/com~apple~CloudDocs/PROGRAM/assets/fontawesome-free-6.3.0-web/css/solid.css"
+    rel="stylesheet">
 </head>
 
 <body>
   <div id="page-wrapper">
     <header id="header">
+      <img id="header-img" src="" alt="" />
       <div class="logo">
-        <i class="fa fa-3x fa-sliders-h"></i>
-        <i class="fas fa-sliders-h"></i>
+        <i class="fa-solid fa-sliders fa-3x fa-beat" style="--fa-beat-scale: 1.02; --fa-animation-duration: 2s;"></i>
         <h1>
           Trailer Music
         </h1>
@@ -28,10 +35,10 @@
     </header>
 
     <!-- unnecessary? -->
-    <div class="container"></div>
+    <!-- <div class="container"></div> -->
 
     <section id="hero">
-      <h2>Handcrafted, home-made masterpieces</h2>
+      <h2>Orchestrated Masterpieces</h2>
       <form id="form" action="https://www.freecodecamp.com/email-submit">
         <!-- written with carriage, more readable -->
         <input name="email" id="email" type="email" placeholder="Enter your email address" required />
@@ -43,78 +50,79 @@
       <section id="features">
         <div class="grid">
           <div class="icon">
-            <i class="fa fa-3x fa-fire"></i>
+            <i class="fa-solid fa-guitar fa-3x fa-beat" style="--fa-beat-scale: 1.02; --fa-animation-duration: 2s;"></i>
           </div>
           <div class="desc">
-            <h2>Premium Materials</h2>
+            <h2>Premium Orchestration</h2>
             <p>
-              Our trombones use the shiniest brass which is sourced locally.
-              This will increase the longevity of your purchase.
-            </p>
-          </div>
-        </div>
-        <div class="grid">
-          <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
-          <div class="desc">
-            <h2>Fast Shipping</h2>
-            <p>
-              We make sure you recieve your trombone as soon as we have
-              finished making it. We also provide free returns if you are not
-              satisfied.
+              Our trailer music takes the utmost care in orchestrating with
+              the latest sampled technology. We use in-house live musicians
+              to increase the liveliness of our music.
             </p>
           </div>
         </div>
         <div class="grid">
           <div class="icon">
-            <i class="fa fa-3x fa-battery-full" aria-hidden="true"></i>
+            <i class="fa fa-forward-fast fa-3x fa-beat" style="--fa-beat-scale: 1.02; --fa-animation-duration: 2s;"></i>
+          </div>
+          <div class="desc">
+            <h2>Fast Delivery</h2>
+            <p>
+              Our fast delivery times ensures you can place the most focus
+              on the development and craft your story. (Please allow 2-3 days
+              for arrival).
+            </p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="icon">
+            <i class="fa-solid fa-circle-check fa-3x fa-beat"
+              style="--fa-beat-scale: 1.02; --fa-animation-duration: 2s;"></i>
           </div>
           <div class="desc">
             <h2>Quality Assurance</h2>
             <p>
-              For every purchase you make, we will ensure there are no damages
-              or faults and we will check and test the pitch of your
-              instrument.
+              We understand that conveying the emotion of your story is a tribulous
+              path, we offer re-writes up to a maximum of 3 times.
             </p>
           </div>
         </div>
       </section>
       <section id="how-it-works">
         <!-- an inline frame (embed another document within this document) -->
-        <iframe id="video" height="315"
-          src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/37qcUBZ8-10"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen></iframe>
       </section>
       <section id="pricing">
         <div class="product" id="tenor">
-          <div class="level">Tenor Trombone</div>
+          <div class="level">License from Catalogue</div>
           <h2>$600</h2>
           <ol>
-            <li>Lorem ipsum.</li>
-            <li>Lorem ipsum.</li>
-            <li>Lorem ipsum dolor.</li>
-            <li>Lorem ipsum.</li>
+            <li>Choose a pre-existing track from our catalogue.</li>
+            <li>Avoid content flagging.</li>
+            <li>We retain a 50% royalty on future streams.</li>
           </ol>
           <button class="btn">Select</button>
         </div>
         <div class="product" id="bass">
-          <div class="level">Bass Trombone</div>
+          <div class="level">Custom License</div>
           <h2>$900</h2>
           <ol>
-            <li>Lorem ipsum.</li>
-            <li>Lorem ipsum.</li>
-            <li>Lorem ipsum dolor.</li>
-            <li>Lorem ipsum.</li>
+            <li>We create custom music for your story.</li>
+            <li>Re-writes up to a maximum of 3 times.</li>
+            <li>We retain a 50% royalty on future streams.</li>
           </ol>
           <button class="btn">Select</button>
         </div>
         <div class="product" id="valve">
-          <div class="level">Valve Trombone</div>
-          <h2>$1200</h2>
+          <div class="level">Custom Buyout</div>
+          <h2>$2700</h2>
           <ol>
-            <li>Plays similar to a Trumpet</li>
-            <li>Great for Jazz Bands</li>
-            <li>Lorem ipsum dolor.</li>
-            <li>Lorem ipsum.</li>
+            <li>We create custom music for your story.</li>
+            <li>Re-writes up to a maximum of 3 times.</li>
+            <li>You own the music.</li>
           </ol>
           <button class="btn">Select</button>
         </div>
@@ -125,7 +133,7 @@
           <li><a href="#">Terms</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <span>Copyright 2016, &nbspOriginal Trombones</span>
+        <span>Copyright 2022, &nbspTrailer Music Factory</span>
       </footer>
     </div>
   </div>

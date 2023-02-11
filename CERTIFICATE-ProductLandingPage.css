@@ -38,7 +38,8 @@ a {
   height: 40px;
   font-size: 1em;
   font-weight: 900;
-  text-transform: uppercase;
+  font-weight: bold;
+  /* text-transform: uppercase; */
   border: 3px black solid;
   border-radius: 15px;
   background: transparent;
@@ -68,6 +69,8 @@ header {
 
 .logo {
   width: 60vw;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 650px) {
@@ -90,6 +93,10 @@ header {
   margin-left: 20px;
 }
 
+.logo>h1 {
+  margin-left: 15px;
+}
+
 @media (max-width: 650px) {
   .logo>img {
     margin: 0 auto;
@@ -98,6 +105,10 @@ header {
 
 nav {
   font-weight: 400;
+}
+
+header {
+  position: fixed;
 }
 
 @media (max-width: 650px) {
@@ -138,7 +149,7 @@ nav>ul {
   justify-content: center;
   text-align: center;
   height: 200px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 #hero>h2 {
@@ -158,13 +169,19 @@ nav>ul {
   height: 30px;
   margin: 15px 0;
   border: 0;
-  background-color: #f1c40f;
+  /* background-color: #f1c40f; */
 }
 
 #hero input[type='submit']:hover {
   background-color: orange;
-  transition: background-color 1s;
+  transition: background-color 2s;
 }
+
+#hero input[type='submit']:not(:hover) {
+  background-color: #f1c40f;
+  transition: background-color 2s;
+}
+
 
 @media (max-width: 650px) {
   #hero {
@@ -182,7 +199,7 @@ nav>ul {
   justify-content: center;
   height: 125px;
   width: 20vw;
-  color: darkorange;
+  color: firebrick;
 }
 
 @media (max-width: 550px) {
