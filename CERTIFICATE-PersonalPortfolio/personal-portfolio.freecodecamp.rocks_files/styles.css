@@ -159,6 +159,7 @@ img {
   justify-content: center;
   align-items: center;
   width: 100%;
+  /* note the utility of viewport height as making a site statement */
   height: 100vh;
   background-color: #000;
   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
@@ -194,9 +195,14 @@ img {
 /* "Automagic" image grid using no media queries */
 .projects-grid {
   display: grid;
+  /* times repeated is automatic */
+  /* size will be minimum 320px */
+  /* size at max must take up 1 equal part accounting for minimum */
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 4rem;
   width: 100%;
+  /* if max-width not set grid will exceed 3 column */
+  /* styling for large screens */
   max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 6rem;
@@ -204,6 +210,7 @@ img {
 
 @media (max-width: 30.625em) {
   .projects-section {
+    /* reduce from padding: 10rem 2rem; for smaller screens */
     padding: 6rem 1rem;
   }
 
@@ -222,6 +229,7 @@ img {
 .code {
   color: var(--main-gray);
   transition: color 0.3s ease-out;
+  vertical-align: 1px;
 }
 
 .project:hover .code {
