@@ -144,6 +144,7 @@ img {
   display: block;
   font-size: 2.2rem;
   padding: 2rem;
+  height: 6.85vh;
 }
 
 .nav-list a:hover {
@@ -222,23 +223,32 @@ img {
 .project {
   background: var(--main-gray);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 2px;
+  border-radius: 20px;
+}
+
+.project-image {
+  border-radius: 20px 20px 0 0;
 }
 
 /* a cool way to add light interactivity */
 .code {
   color: var(--main-gray);
   transition: color 0.3s ease-out;
-  vertical-align: 1px;
+  vertical-align: 1.3px;
 }
 
 .project:hover .code {
   color: #ff7f50;
+  /* vertical-align: 1px; */
 }
 
 .project-image {
+  /* use calculate to leave room for a title at the */
+  /* bottom of a grid block */
   height: calc(100% - 6.8rem);
   width: 100%;
+  /* The image keeps its aspect ratio and fills the 
+  given dimension. The image will be clipped to fit */
   object-fit: cover;
 }
 
@@ -248,9 +258,10 @@ img {
 }
 
 .btn {
+  /* display: block adds a break and does not respect padding */
   display: inline-block;
   padding: 1rem 2rem;
-  border-radius: 2px;
+  border-radius: 10px;
 }
 
 .btn-show-all {
@@ -264,12 +275,14 @@ img {
 }
 
 .btn-show-all:hover>i {
-  transform: translateX(2px);
+  transform: translateX(5px);
 }
 
 .btn-show-all>i {
   margin-left: 10px;
-  transform: translateX(0);
+  /* not sure translateX(0) is completely necessary */
+  /* perhaps just good ot set initial values */
+  /* transform: translateX(0); */
   transition: transform 0.3s ease-out;
 }
 
@@ -282,7 +295,8 @@ img {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 80vh;
+  /* TODO: set height full veiwport */
+  height: 90.15vh;
   padding: 0 2rem;
   background: var(--main-gray);
 }
