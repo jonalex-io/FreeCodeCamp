@@ -144,7 +144,6 @@ img {
   display: block;
   font-size: 2.2rem;
   padding: 2rem;
-  height: 6.85vh;
 }
 
 .nav-list a:hover {
@@ -295,8 +294,7 @@ img {
   align-items: center;
   text-align: center;
   width: 100%;
-  /* TODO: set height full veiwport */
-  height: 90.15vh;
+  height: 90vh;
   padding: 0 2rem;
   background: var(--main-gray);
 }
@@ -343,6 +341,7 @@ footer {
   padding: 2rem;
   background: var(--main-gray);
   border-top: 4px solid var(--main-red);
+  align-items: center;
 }
 
 footer>p {
