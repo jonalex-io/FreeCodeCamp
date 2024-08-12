@@ -1,3 +1,4 @@
+// VARIABLES
 let xp = 0;
 let health = 100;
 let gold = 50;
@@ -6,6 +7,7 @@ let fighting;
 let monsterHealth;
 let inventory = ["stick"];
 
+// CONSTANTS
 const button1 = document.querySelector('#button1');
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
@@ -16,6 +18,8 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+
+// OBJECT_ARRAYS
 const weapons = [
     { name: 'stick', power: 5 },
     { name: 'dagger', power: 30 },
@@ -90,22 +94,27 @@ const locations = [
     }
 ];
 
-// initialize buttons
+// INITIALIZE_BUTTONS
 button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
+// LOCATION_CHANGE_UPDATES
 function update(location) {
+    // hide monsterStats by default, will display after via goFight function
     monsterStats.style.display = "none";
+    // update button text & functions based on object within locations array
     button1.innerText = location["button text"][0];
     button2.innerText = location["button text"][1];
     button3.innerText = location["button text"][2];
     button1.onclick = location["button functions"][0];
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
+    // update description text
     text.innerHTML = location.text;
 }
 
+// LOCATION_CHANGE
 function goTown() {
     update(locations[0]);
 }
@@ -118,6 +127,7 @@ function goCave() {
     update(locations[2]);
 }
 
+// BUY_SELL
 function buyHealth() {
     if (gold >= 10) {
         gold -= 10;
@@ -161,6 +171,7 @@ function sellWeapon() {
     }
 }
 
+// PRESET_FIGHTING
 function fightSlime() {
     fighting = 0;
     goFight();
@@ -184,6 +195,7 @@ function goFight() {
     monsterHealthText.innerText = monsterHealth;
 }
 
+// FIGHTING
 function attack() {
     text.innerText = "The " + monsters[fighting].name + " attacks.";
     text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
@@ -232,6 +244,7 @@ function defeatMonster() {
     update(locations[4]);
 }
 
+// WIN_LOSE
 function lose() {
     update(locations[5]);
 }
@@ -240,6 +253,7 @@ function winGame() {
     update(locations[6]);
 }
 
+// REST_GAME
 function restart() {
     xp = 0;
     health = 100;
@@ -252,10 +266,12 @@ function restart() {
     goTown();
 }
 
+// EASTER_EGG
 function easterEgg() {
     update(locations[7]);
 }
 
+// GUESSING_GAME
 function pickTwo() {
     pick(2);
 }
