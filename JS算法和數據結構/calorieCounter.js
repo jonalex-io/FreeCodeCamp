@@ -40,19 +40,27 @@ function isInvalidInput(str) {
   //    * returns null if no match found
 }
 
+// Insert HTML within user's desired input-container for data input
 function addEntry() {
+  // * #entry-dropdown within html uses a <label> with a "for" attribute to reference the <select> <option>s
+  //    * each option tag is given a value attribute
+  //    * uses .value here because a Select Object represents an HTML <select> element
+  //    * HTML <!-- fieldset ids and input-container class pathways correlate with dropdown select options later -->
   const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
+  // * Determine which entry # the user is inputting, + 1 to start count from 1
+  // * Use to aid id selector construction
+  //    * Note console initially logs with nothing as there is no <input> with a type="text" attribute
+  //    * this case uses a CSS [attribute] selector
+  //    * e.g. input[type="text"], a[target="_blank"]
   const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length + 1;
+  // console.log(entryNumber);
+
   const HTMLString = `
   <label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>
   <input type="text" id="${entryDropdown.value}-${entryNumber}-name" placeholder="Name" />
   <label for="${entryDropdown.value}-${entryNumber}-calories">Entry ${entryNumber} Calories</label>
-  <input
-    type="number"
-    min="0"
-    id="${entryDropdown.value}-${entryNumber}-calories"
-    placeholder="Calories"
-  />`;
+  <input type="number" min="0" id="${entryDropdown.value}-${entryNumber}-calories" placeholder="Calories"/>`;
+
   targetInputContainer.insertAdjacentHTML('beforeend', HTMLString);
 }
 
@@ -126,13 +134,18 @@ clearButton.addEventListener("click", clearForm);
 
 // ***********
 // *** 實驗 ***
-console.log("%c FUNCTION cleanInputString(str)", "font-weight: bold;");
+console.log("%c function cleanInputString(str)", "font-weight: bold;");
 console.log(cleanInputString("+100"))
 console.log(cleanInputString("-100"))
-console.log(cleanInputString("1 0 0"))
-console.log(cleanInputString("= 1 0 0"))
+console.log(cleanInputString("+- 1 0 0"))
 
-console.log("%c FUNCTION isInvalidInput(str)", "font-weight: bold;");
+console.log("%c function isInvalidInput(str)", "font-weight: bold;");
 console.log(isInvalidInput("10e1"));
 console.log(isInvalidInput("10E1"));
 console.log(isInvalidInput("101"));
+
+console.log("%c function addEntry()", "font-weight: bold;");
+console.log("see comment")
+// addEntry();
+
+console.log("%c function calculateCalories(e)", "font-weight: bold;");
